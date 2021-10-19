@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@mixin col-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@mixin row-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+$gray-900   : #111827;
+$gray-800   : #1f2937;
+$gray-700   : #374151;
+$gray-700-op: #374151aa;
+$gray-600   : #4B5563;
+$gray-500   : #6B7280;
+$gray-400   : #9CA3AF;
+$gray-300   : #D1D5DB;
+$gray-200   : #E5E7EB;
+$gray-100   : #F3F4F6;
+$gray-100-op: #F3F4F6aa;
+$yellow-600 : #D97706;
+$yellow-700 : #B45309;

@@ -1,0 +1,88 @@
+@import "variables";
+@import "toggle";
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin    : 0;
+    padding   : 0;
+}
+
+a {
+    text-decoration: none;
+    color          : inherit;
+}
+
+body {
+    width           : 100vw;
+    height          : 100vh;
+    background-color: $gray-200;
+    font-family     : Roboto;
+    overflow-x      : hidden;
+
+    header.minimal {
+        @include col-center;
+        width   : 100vw;
+        height  : 12vh;
+        position: relative;
+
+        div.header-top {
+            padding         : .5rem 3rem;
+            background-color: $gray-800;
+            position        : fixed;
+            top             : 0;
+            z-index         : 50;
+            display         : flex;
+            justify-content : space-between;
+            align-items     : center;
+            width           : 100vw;
+
+            div.header-logo {
+                a {
+                    @include row-center;
+
+                    img {
+                        width     : auto;
+                        max-height: 10vh;
+                    }
+                }
+            }
+        }
+
+        div#dropdown-menu {
+            background-color: $gray-800;
+            display         : none;
+            position        : absolute;
+            width           : 100vw;
+            top             : 13vh;
+            padding         : 0 0 3% 0;
+
+            &.active {
+                display: flex;
+                @include col-center;
+            }
+
+            a {
+                color     : $gray-100;
+                text-align: center;
+                display   : block;
+                margin    : .5% 0;
+                width     : 100%;
+                font-size : 1.2rem;
+            }
+
+            div.wide-line {
+                border-bottom: 1px solid $gray-100;
+                width        : 80%;
+                margin       : 3% 0;
+            }
+
+            div.small-line {
+                border-bottom: 1px solid $gray-300;
+                width        : 50%;
+                margin       : 1% 0;
+            }
+        }
+    }
+}
