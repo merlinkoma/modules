@@ -1,33 +1,57 @@
 @import "variables";
 
-div#carousel {
-    width         : 70vw;
-    box-shadow    : 0 0 20px #242e31;
-    display       : flex;
-    flex-direction: row;
-    margin        : 5% auto;
+body {
+    box-sizing      : border-box;
+    padding         : 0;
+    margin          : 0;
+    width           : 100vw;
+    height          : 100vh;
+    background-color: $blue;
+    display         : flex;
+    flex-direction: column;
+    justify-content : center;
+    align-items     : center;
 
-    img.slide-control {
-        width      : 5vw;
-        height      : 5vw;
-        display    : flex;
-        align-items: center;
-        font-size  : 10em;
-    }
+    div.carousel-container {
+        position: relative;
+        display         : flex;
+        justify-content : space-around;
+        align-items     : center;
+        width           : 80vw;
+        background-color: $light;
 
-    div.img-registrar-carousel {
-        width         : 60vw;
-        display       : flex;
-        flex-direction: row;
-        border        : 6px solid $light;
-        overflow-x    : hidden;
+        img.slide-control {
+            width      : 5vw;
+            height     : 5vw;
+            display    : flex;
+            align-items: center;
+            font-size  : 10em;
+        }
 
-        img.registrar-carousel {
-            height    : 20vw;
-            width     : auto;
-            box-shadow: 0 0 20px #242e31;
-            margin    : 1%;
-            border    : 1px solid $blue;
+        div.carousel-slides {
+            width         : 60vw;
+            display       : flex;
+            flex-direction: row;
+            border        : 6px solid $light;
+            overflow-x    : hidden;
+            
+            &.carousel-slides1{
+                justify-content: center;
+            }
+            
+            div.images-div1, div.images-div2{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                img.registrar-carousel {
+                    height    : 20vw;
+                    width     : auto;
+                    margin    : 1%;
+                    border    : 3px solid black;
+                }
+            }
+
         }
     }
 }
