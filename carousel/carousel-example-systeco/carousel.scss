@@ -1,0 +1,56 @@
+@import "variables";
+@import "mixins";
+
+div.carousel-container {
+    background-color: $gray-500;
+
+    div.carousel-bloc1 {
+        @include col-center;
+
+        div.carousel-bloc2 {
+            @include row-center;
+
+            div.carousel-chevrons {
+                img {
+                    height: 50px;
+                    width : auto;
+                }
+            }
+
+            div.carousel-slides {
+                div.carousel-item {
+                    position: relative;
+
+                    img {
+                        width : 40vw;
+                        height: auto;
+                    }
+
+                    div.carousel-texts {
+                        color     : $gray-200;
+                        position  : absolute;
+                        bottom    : 5%;
+                        width     : 100%;
+                        text-align: center;
+
+                        a {
+                            color          : inherit;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        div.bottom-buttons {
+            @include row-center;
+
+            div.buttons {
+                width           : 30px;
+                height          : 5px;
+                margin          : 2%;
+                background-color: $gray-100;
+            }
+        }
+    }
+}
